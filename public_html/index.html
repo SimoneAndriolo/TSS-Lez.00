@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="div_1" style="font-size: 25px;">Titolo assente</div>
+        <div id="div_ora">Che ore sono? </div>
+        
+        User: <input id="input_testo" placeholder="Ins Testo" type="text"/>
+  
+        <div></div>
+        
+        <button onclick="impostaTitolo()">imposta il titolo</button>
+        <div></div>
+        <button onclick="document.getElementById('div_ora').innerHTML=Date()">Che ore sono? </button>
+    </body>
+</html>
+
+
+<script >
+
+function impostaTitolo() {
+
+// recupero oggetto input testo
+var mioObjtesto = document.getElementById("input_testo");
+//assegno alla variabile txin il contenuto dell'input ovvero l'attributo value dell'oggetto
+var txin = mioObjtesto.value;
+//Recupero oggetto finale per il testo da far vedere div_1
+var miodiv1 = document.getElementById("div_1");
+// Assegno al contenuto del div innerHTML la frase che c'è in txin
+miodiv1.innerHTML = txin;
+mioObjtesto.value = "";
+
+}
+
+</script>
